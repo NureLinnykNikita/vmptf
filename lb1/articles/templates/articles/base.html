@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Статті{% endblock %}</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; color: #333; }
+        header { background: #2c3e50; color: white; padding: 16px 32px; }
+        header a { color: white; text-decoration: none; font-size: 1.4rem; font-weight: bold; }
+        .container { max-width: 900px; margin: 32px auto; padding: 0 16px; }
+        .card { background: white; border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .meta { color: #777; font-size: 0.85rem; margin-top: 6px; }
+        .btn { display: inline-block; padding: 8px 16px; background: #2980b9; color: white; border-radius: 4px; margin-top: 12px; }
+        .btn:hover { background: #1f6391; text-decoration: none; }
+        select, input[type=submit] { padding: 6px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; }
+        input[type=submit] { background: #2980b9; color: white; border: none; cursor: pointer; }
+        input[type=submit]:hover { background: #1f6391; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">📰 Статті</a>
+    </header>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

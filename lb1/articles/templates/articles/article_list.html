@@ -1,0 +1,43 @@
+{% extends "articles/base.html" %}
+
+{% block title %}Список статей{% endblock %}
+
+{% block content %}
+<h1 style="margin-bottom:20px;">Усі статті</h1>
+
+<!-- Рівень 2: Фільтр за автором -->
+<div class="card" style="padding:16px;">
+    <form method="get" style="display:flex; gap:10px; align-items:center;">
+        <label for="author"><strong>Фільтр за автором:</strong></label>
+        <select name="author" id="author">
+            <option value="">— Всі автори —</option>
+            {% for a in authors %}
+                <option value="{{ a }}" {% if a == author_filter %}selected{% endif %}>{{ a }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Показати">
+        {% if author_filter %}
+            <a href="/" style="color:#c0392b;">✕ Скинути</a>
+        {% endif %}
+    </form>
+</div>
+
+{% if author_filter %}
+    <p style="margin-bottom:12px;">Статті автора: <strong>{{ author_filter }}</strong> ({{ articles|length }})</p>
+{% endif %}
+
+{% if articles %}
+    {% for article in articles %}
+    <div class="card">
+        <a href="/articles/{{ article.pk }}/" style="font-size:1.15rem; font-weight:bold;">{{ article.title }}</a>
+        <div class="meta">✍️ {{ article.author }} &nbsp;|&nbsp; 📅 {{ article.published_date }}</div>
+        <p style="margin-top:10px; color:#555;">{{ article.text|truncatewords:30 }}</p>
+        <a href="/articles/{{ article.pk }}/" class="btn">Читати далі →</a>
+    </div>
+    {% endfor %}
+{% else %}
+    <div class="card">
+        <p>Статей не знайдено.</p>
+    </div>
+{% endif %}
+{% endblock %}

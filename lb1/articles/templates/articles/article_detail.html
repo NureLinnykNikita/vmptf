@@ -1,0 +1,15 @@
+{% extends "articles/base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<a href="/" style="color:#777; font-size:0.9rem;">← Назад до списку</a>
+
+<div class="card" style="margin-top:16px;">
+    <h1 style="font-size:1.6rem; margin-bottom:8px;">{{ article.title }}</h1>
+    <div class="meta" style="margin-bottom:20px;">
+        ✍️ <strong>{{ article.author }}</strong> &nbsp;|&nbsp; 📅 {{ article.published_date }}
+    </div>
+    <div style="line-height:1.7; white-space:pre-wrap;">{{ article.text }}</div>
+</div>
+{% endblock %}
