@@ -1,0 +1,122 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "nikita",
+      "fullName": "Нікіта Лінник",
+      "bio": "Студент, який розробляє серверні застосунки та цікавиться веброзробкою.",
+      "avatarUrl": "https://api.dicebear.com/9.x/initials/svg?seed=Nikita"
+    },
+    {
+      "id": 2,
+      "username": "anna",
+      "fullName": "Анна Коваль",
+      "bio": "Любить дизайн інтерфейсів, подорожі та каву.",
+      "avatarUrl": "https://api.dicebear.com/9.x/initials/svg?seed=Anna"
+    },
+    {
+      "id": 3,
+      "username": "dmytro",
+      "fullName": "Дмитро Шевченко",
+      "bio": "Backend developer, працює з Node.js та базами даних.",
+      "avatarUrl": "https://api.dicebear.com/9.x/initials/svg?seed=Dmytro"
+    },
+    {
+      "id": 4,
+      "username": "olena",
+      "fullName": "Олена Мельник",
+      "bio": "Пише пости про навчання, продуктивність і React.",
+      "avatarUrl": "https://api.dicebear.com/9.x/initials/svg?seed=Olena"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "content": "Сьогодні почав роботу над лабораторною з Node.js, Express та React.",
+      "createdAt": "2026-05-08T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "content": "React дуже зручний для створення інтерактивних інтерфейсів.",
+      "createdAt": "2026-05-08T10:15:00.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "content": "Express middleware дозволяє легко додавати логування, CORS та компресію.",
+      "createdAt": "2026-05-08T10:30:00.000Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "userId": 2,
+      "text": "Класна тема для лабораторної!",
+      "createdAt": "2026-05-08T11:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "postId": 3,
+      "userId": 4,
+      "text": "Так, middleware дуже добре демонструє архітектуру Express.",
+      "createdAt": "2026-05-08T11:10:00.000Z"
+    }
+  ],
+  "friendships": [
+    {
+      "id": 1,
+      "requesterId": 1,
+      "addresseeId": 2,
+      "status": "accepted",
+      "createdAt": "2026-05-08T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "requesterId": 3,
+      "addresseeId": 1,
+      "status": "accepted",
+      "createdAt": "2026-05-08T09:30:00.000Z",
+      "acceptedAt": "2026-05-08T20:18:48.196Z"
+    },
+    {
+      "id": 3,
+      "requesterId": 1,
+      "addresseeId": 4,
+      "status": "pending",
+      "createdAt": "2026-05-08T20:20:38.085Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "senderId": 1,
+      "receiverId": 2,
+      "text": "Привіт! Як справи з React-частиною?",
+      "createdAt": "2026-05-08T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "senderId": 2,
+      "receiverId": 1,
+      "text": "Привіт! Уже зробила сторінку користувачів.",
+      "createdAt": "2026-05-08T12:05:00.000Z"
+    },
+    {
+      "id": 3,
+      "senderId": 1,
+      "receiverId": 2,
+      "text": "Hello",
+      "createdAt": "2026-05-08T20:19:07.970Z"
+    },
+    {
+      "id": 4,
+      "senderId": 1,
+      "receiverId": 2,
+      "text": "hihisdafhop",
+      "createdAt": "2026-05-08T20:19:11.139Z"
+    }
+  ]
+}
