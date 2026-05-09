@@ -1,0 +1,49 @@
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #faf9f6;
+  --color-background-tertiary: #f4f1ea;
+  --color-border-secondary: #b9b7ad;
+  --color-border-tertiary: #dedbd1;
+  --color-text-primary: #25241f;
+  --color-text-secondary: #6d6a61;
+  --color-text-tertiary: #9c988f;
+  --border-radius-md: 8px;
+  --border-radius-lg: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background: var(--color-background-tertiary);
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+button {
+  transition: all 0.15s;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: var(--color-background-tertiary);
+}
+
+.app__container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
